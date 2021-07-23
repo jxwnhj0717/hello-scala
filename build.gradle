@@ -1,0 +1,21 @@
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java' //指定java插件
+apply plugin: 'scala' //指定scala插件
+
+repositories {
+    maven {
+        url 'https://maven.aliyun.com/repository/public'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    implementation 'org.scala-lang:scala-library:2.12.14'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+}
